@@ -1,0 +1,1242 @@
+<!--
+  ЛЕНДИНГ ДЛЯ TILDA / БЛОК T123 «HTML-КОД»
+  Перед публикацией замените:
+  1) «Ваш бренд»
+  2) телефон +7 (900) 085-78-62
+  3) значение WHATSAPP_NUMBER в JavaScript в самом низу
+  4) ссылки на Telegram и политику конфиденциальности
+  5) примеры результатов на свои реальные кейсы
+-->
+
+<section id="yc-site" class="yc-site">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+    #yc-site,
+    #yc-site * { box-sizing: border-box; }
+
+    #yc-site {
+      --yc-bg: #f7f8fc;
+      --yc-card: #ffffff;
+      --yc-text: #171923;
+      --yc-muted: #687083;
+      --yc-line: #e8eaf1;
+      --yc-yellow: #ffcc00;
+      --yc-yellow-hover: #f2c200;
+      --yc-purple: #6f52ed;
+      --yc-purple-soft: #eeeaff;
+      --yc-green: #16a66a;
+      --yc-shadow: 0 20px 60px rgba(36, 39, 55, .10);
+      color: var(--yc-text);
+      background: var(--yc-bg);
+      font-family: Manrope, Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    #yc-site a { color: inherit; text-decoration: none; }
+    #yc-site button,
+    #yc-site input,
+    #yc-site select { font: inherit; }
+    #yc-site button { cursor: pointer; }
+
+    #yc-site .yc-container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    #yc-site .yc-header {
+      position: relative;
+      z-index: 20;
+      padding: 22px 0;
+      background: rgba(247,248,252,.86);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(232,234,241,.8);
+    }
+
+    #yc-site .yc-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    #yc-site .yc-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 800;
+      font-size: 18px;
+      white-space: nowrap;
+    }
+
+    #yc-site .yc-logo-icon {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: var(--yc-yellow);
+      color: #181818;
+      box-shadow: 0 8px 24px rgba(255,204,0,.28);
+    }
+
+    #yc-site .yc-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #4e5565;
+    }
+
+    #yc-site .yc-nav a { transition: .2s ease; }
+    #yc-site .yc-nav a:hover { color: var(--yc-purple); }
+
+    #yc-site .yc-header-contact {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    #yc-site .yc-phone {
+      font-size: 14px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    #yc-site .yc-btn {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 0 22px;
+      border: 0;
+      border-radius: 15px;
+      font-weight: 800;
+      font-size: 14px;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    #yc-site .yc-btn:hover { transform: translateY(-2px); }
+
+    #yc-site .yc-btn-yellow {
+      color: #191919;
+      background: var(--yc-yellow);
+      box-shadow: 0 12px 30px rgba(255,204,0,.25);
+    }
+
+    #yc-site .yc-btn-yellow:hover { background: var(--yc-yellow-hover); }
+
+    #yc-site .yc-btn-dark {
+      color: #fff;
+      background: var(--yc-text);
+      box-shadow: 0 12px 28px rgba(23,25,35,.18);
+    }
+
+    #yc-site .yc-btn-light {
+      color: var(--yc-text);
+      background: #fff;
+      border: 1px solid var(--yc-line);
+    }
+
+    #yc-site .yc-hero {
+      position: relative;
+      padding: 82px 0 88px;
+    }
+
+    #yc-site .yc-hero::before {
+      content: '';
+      position: absolute;
+      width: 620px;
+      height: 620px;
+      right: -180px;
+      top: -250px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(111,82,237,.17), rgba(111,82,237,0) 68%);
+      pointer-events: none;
+    }
+
+    #yc-site .yc-hero-grid {
+      display: grid;
+      grid-template-columns: 1.03fr .97fr;
+      align-items: center;
+      gap: 64px;
+    }
+
+    #yc-site .yc-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 13px;
+      border: 1px solid #ded8ff;
+      border-radius: 999px;
+      color: #5e43d5;
+      background: var(--yc-purple-soft);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    #yc-site .yc-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--yc-green);
+      box-shadow: 0 0 0 5px rgba(22,166,106,.11);
+    }
+
+    #yc-site h1 {
+      margin: 22px 0 20px;
+      max-width: 720px;
+      font-size: clamp(40px, 5.2vw, 70px);
+      line-height: 1.02;
+      letter-spacing: -.055em;
+      font-weight: 800;
+    }
+
+    #yc-site .yc-highlight {
+      position: relative;
+      display: inline-block;
+      z-index: 1;
+    }
+
+    #yc-site .yc-highlight::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      left: -2px;
+      right: -3px;
+      bottom: 4px;
+      height: 18px;
+      border-radius: 5px;
+      background: var(--yc-yellow);
+      transform: rotate(-1deg);
+    }
+
+    #yc-site .yc-lead {
+      max-width: 630px;
+      margin: 0;
+      color: var(--yc-muted);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    #yc-site .yc-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    #yc-site .yc-mini-proof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 28px;
+      color: #555d6e;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    #yc-site .yc-mini-proof span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    #yc-site .yc-check {
+      width: 20px;
+      height: 20px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--yc-green);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    #yc-site .yc-map-card {
+      position: relative;
+      min-height: 515px;
+      padding: 26px;
+      border: 1px solid #eceef4;
+      border-radius: 32px;
+      background: #fff;
+      box-shadow: var(--yc-shadow);
+    }
+
+    #yc-site .yc-map-bg {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      border-radius: 32px;
+      background:
+        linear-gradient(28deg, transparent 47%, #e8eaf0 48%, #e8eaf0 50%, transparent 51%) 0 0/130px 130px,
+        linear-gradient(152deg, transparent 47%, #e8eaf0 48%, #e8eaf0 50%, transparent 51%) 20px 10px/160px 160px,
+        #f4f5f8;
+    }
+
+    #yc-site .yc-map-road {
+      position: absolute;
+      left: -50px;
+      top: 220px;
+      width: 560px;
+      height: 42px;
+      background: #fff;
+      border: 1px solid #e7e9ef;
+      transform: rotate(-21deg);
+    }
+
+    #yc-site .yc-map-pin {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 50% 50% 50% 10px;
+      transform: rotate(-45deg);
+      background: var(--yc-yellow);
+      box-shadow: 0 12px 30px rgba(38,40,55,.18);
+    }
+
+    #yc-site .yc-map-pin span { transform: rotate(45deg); font-weight: 800; }
+    #yc-site .yc-pin-1 { left: 18%; top: 20%; }
+    #yc-site .yc-pin-2 { right: 15%; top: 28%; background: var(--yc-purple); color: white; }
+    #yc-site .yc-pin-3 { left: 44%; bottom: 17%; }
+
+    #yc-site .yc-business-card {
+      position: absolute;
+      z-index: 3;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      padding: 22px;
+      border: 1px solid rgba(230,232,239,.9);
+      border-radius: 22px;
+      background: rgba(255,255,255,.94);
+      box-shadow: 0 18px 50px rgba(34,37,53,.16);
+      backdrop-filter: blur(12px);
+    }
+
+    #yc-site .yc-business-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 16px;
+    }
+
+    #yc-site .yc-business-name { font-size: 18px; font-weight: 800; }
+    #yc-site .yc-business-category { margin-top: 5px; color: var(--yc-muted); font-size: 12px; }
+    #yc-site .yc-rating { font-size: 22px; font-weight: 800; white-space: nowrap; }
+    #yc-site .yc-star { color: #ffb800; }
+
+    #yc-site .yc-progress {
+      height: 10px;
+      margin: 20px 0 10px;
+      overflow: hidden;
+      border-radius: 99px;
+      background: #eceef3;
+    }
+
+    #yc-site .yc-progress span {
+      display: block;
+      width: 87%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--yc-purple), #9b86ff);
+    }
+
+    #yc-site .yc-card-caption {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--yc-muted);
+      font-size: 12px;
+    }
+
+    #yc-site .yc-floating {
+      position: absolute;
+      z-index: 4;
+      padding: 12px 15px;
+      border: 1px solid var(--yc-line);
+      border-radius: 15px;
+      background: white;
+      box-shadow: 0 14px 35px rgba(34,37,53,.13);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    #yc-site .yc-float-review { right: -18px; top: 64px; }
+    #yc-site .yc-float-route { left: -22px; top: 158px; }
+
+    #yc-site .yc-section { padding: 96px 0; }
+    #yc-site .yc-section-white { background: #fff; }
+
+    #yc-site .yc-section-head {
+      max-width: 750px;
+      margin-bottom: 42px;
+    }
+
+    #yc-site .yc-section-head.yc-center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    #yc-site .yc-kicker {
+      margin-bottom: 12px;
+      color: var(--yc-purple);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    #yc-site h2 {
+      margin: 0 0 16px;
+      font-size: clamp(32px, 4vw, 50px);
+      line-height: 1.1;
+      letter-spacing: -.04em;
+    }
+
+    #yc-site .yc-section-head p {
+      margin: 0;
+      color: var(--yc-muted);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    #yc-site .yc-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    #yc-site .yc-service-card {
+      min-height: 260px;
+      padding: 28px;
+      border: 1px solid var(--yc-line);
+      border-radius: 24px;
+      background: var(--yc-card);
+      transition: .25s ease;
+    }
+
+    #yc-site .yc-service-card:hover {
+      transform: translateY(-6px);
+      border-color: #d8d0ff;
+      box-shadow: 0 22px 50px rgba(45,48,68,.09);
+    }
+
+    #yc-site .yc-service-icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 24px;
+      border-radius: 17px;
+      color: var(--yc-purple);
+      background: var(--yc-purple-soft);
+      font-size: 25px;
+    }
+
+    #yc-site .yc-service-card:nth-child(2) .yc-service-icon,
+    #yc-site .yc-service-card:nth-child(5) .yc-service-icon {
+      color: #8a6800;
+      background: #fff4c7;
+    }
+
+    #yc-site .yc-service-card h3 { margin: 0 0 11px; font-size: 19px; }
+    #yc-site .yc-service-card p { margin: 0; color: var(--yc-muted); line-height: 1.65; font-size: 14px; }
+
+    #yc-site .yc-results {
+      color: white;
+      background: #171923;
+    }
+
+    #yc-site .yc-results .yc-kicker { color: #ad9cff; }
+    #yc-site .yc-results .yc-section-head p { color: #aeb4c3; }
+
+    #yc-site .yc-result-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    #yc-site .yc-result-card {
+      padding: 28px;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 24px;
+      background: rgba(255,255,255,.055);
+    }
+
+    #yc-site .yc-result-tag {
+      display: inline-block;
+      padding: 7px 10px;
+      border-radius: 999px;
+      color: #d8d0ff;
+      background: rgba(111,82,237,.19);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    #yc-site .yc-result-card h3 { margin: 20px 0 9px; font-size: 18px; }
+    #yc-site .yc-result-card p { min-height: 46px; margin: 0; color: #aeb4c3; font-size: 13px; line-height: 1.65; }
+
+    #yc-site .yc-metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    #yc-site .yc-metric {
+      padding: 14px;
+      border-radius: 15px;
+      background: rgba(255,255,255,.07);
+    }
+
+    #yc-site .yc-metric strong { display: block; color: var(--yc-yellow); font-size: 23px; }
+    #yc-site .yc-metric span { color: #9fa6b7; font-size: 11px; }
+
+    #yc-site .yc-disclaimer {
+      margin-top: 18px;
+      color: #888f9f;
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    #yc-site .yc-process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      counter-reset: steps;
+    }
+
+    #yc-site .yc-step {
+      position: relative;
+      padding: 26px;
+      border: 1px solid var(--yc-line);
+      border-radius: 22px;
+      background: white;
+      counter-increment: steps;
+    }
+
+    #yc-site .yc-step::before {
+      content: '0' counter(steps);
+      display: block;
+      margin-bottom: 28px;
+      color: var(--yc-purple);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .08em;
+    }
+
+    #yc-site .yc-step h3 { margin: 0 0 10px; font-size: 18px; }
+    #yc-site .yc-step p { margin: 0; color: var(--yc-muted); font-size: 13px; line-height: 1.65; }
+
+    #yc-site .yc-price-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: stretch;
+      gap: 18px;
+    }
+
+    #yc-site .yc-price-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+      border: 1px solid var(--yc-line);
+      border-radius: 26px;
+      background: white;
+    }
+
+    #yc-site .yc-price-card.yc-popular {
+      border: 2px solid var(--yc-purple);
+      box-shadow: 0 20px 60px rgba(111,82,237,.14);
+      transform: translateY(-8px);
+    }
+
+    #yc-site .yc-popular-badge {
+      position: absolute;
+      right: 20px;
+      top: 18px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      color: white;
+      background: var(--yc-purple);
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    #yc-site .yc-price-name { font-size: 19px; font-weight: 800; }
+    #yc-site .yc-price-for { min-height: 42px; margin: 8px 0 22px; color: var(--yc-muted); font-size: 13px; line-height: 1.55; }
+    #yc-site .yc-price { margin-bottom: 23px; font-size: 36px; font-weight: 800; letter-spacing: -.04em; }
+    #yc-site .yc-price small { color: var(--yc-muted); font-size: 12px; font-weight: 600; }
+
+    #yc-site .yc-list {
+      display: grid;
+      gap: 12px;
+      padding: 0;
+      margin: 0 0 28px;
+      list-style: none;
+      color: #505768;
+      font-size: 13px;
+    }
+
+    #yc-site .yc-list li { display: flex; gap: 9px; line-height: 1.55; }
+    #yc-site .yc-list li::before { content: '✓'; color: var(--yc-green); font-weight: 800; }
+    #yc-site .yc-price-card .yc-btn { width: 100%; margin-top: auto; }
+
+    #yc-site .yc-calc-wrap {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 44px;
+      align-items: center;
+      padding: 44px;
+      border-radius: 30px;
+      color: white;
+      background: linear-gradient(135deg, #6f52ed 0%, #5137c6 100%);
+      box-shadow: 0 24px 70px rgba(84,58,200,.24);
+    }
+
+    #yc-site .yc-calc-copy h2 { margin-bottom: 14px; }
+    #yc-site .yc-calc-copy p { margin: 0; color: #ded8ff; line-height: 1.7; }
+
+    #yc-site .yc-calc {
+      padding: 25px;
+      border-radius: 23px;
+      color: var(--yc-text);
+      background: white;
+    }
+
+    #yc-site .yc-field { margin-bottom: 16px; }
+    #yc-site .yc-field label { display: block; margin-bottom: 7px; color: #5f6675; font-size: 12px; font-weight: 700; }
+
+    #yc-site .yc-field input,
+    #yc-site .yc-field select {
+      width: 100%;
+      height: 50px;
+      padding: 0 14px;
+      border: 1px solid #dfe2ea;
+      border-radius: 13px;
+      outline: none;
+      color: var(--yc-text);
+      background: white;
+      transition: .2s ease;
+    }
+
+    #yc-site .yc-field input:focus,
+    #yc-site .yc-field select:focus {
+      border-color: var(--yc-purple);
+      box-shadow: 0 0 0 4px rgba(111,82,237,.10);
+    }
+
+    #yc-site .yc-calc-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 15px;
+      margin: 8px 0 18px;
+      padding: 17px;
+      border-radius: 15px;
+      background: #f4f2ff;
+    }
+
+    #yc-site .yc-calc-total span { color: var(--yc-muted); font-size: 12px; }
+    #yc-site .yc-calc-total strong { color: var(--yc-purple); font-size: 26px; }
+    #yc-site .yc-calc .yc-btn { width: 100%; }
+
+    #yc-site .yc-faq { max-width: 850px; margin: 0 auto; }
+
+    #yc-site .yc-faq-item {
+      border-bottom: 1px solid var(--yc-line);
+    }
+
+    #yc-site .yc-faq-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 23px 0;
+      border: 0;
+      text-align: left;
+      color: var(--yc-text);
+      background: transparent;
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    #yc-site .yc-faq-plus {
+      width: 31px;
+      height: 31px;
+      flex: 0 0 31px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--yc-purple);
+      background: var(--yc-purple-soft);
+      transition: transform .25s ease;
+    }
+
+    #yc-site .yc-faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      color: var(--yc-muted);
+      transition: max-height .3s ease;
+    }
+
+    #yc-site .yc-faq-answer p { margin: 0; padding: 0 50px 23px 0; line-height: 1.7; font-size: 14px; }
+    #yc-site .yc-faq-item.yc-open .yc-faq-answer { max-height: 220px; }
+    #yc-site .yc-faq-item.yc-open .yc-faq-plus { transform: rotate(45deg); }
+
+    #yc-site .yc-cta {
+      padding: 96px 0;
+      background: white;
+    }
+
+    #yc-site .yc-cta-box {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr .9fr;
+      gap: 48px;
+      align-items: center;
+      padding: 56px;
+      border-radius: 32px;
+      color: white;
+      background: #171923;
+    }
+
+    #yc-site .yc-cta-box::after {
+      content: '';
+      position: absolute;
+      width: 430px;
+      height: 430px;
+      right: -170px;
+      top: -220px;
+      border-radius: 50%;
+      background: rgba(111,82,237,.35);
+      filter: blur(10px);
+    }
+
+    #yc-site .yc-cta-copy { position: relative; z-index: 2; }
+    #yc-site .yc-cta-copy h2 { margin-bottom: 15px; }
+    #yc-site .yc-cta-copy p { margin: 0; color: #adb3c2; line-height: 1.7; }
+
+    #yc-site .yc-form {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      gap: 12px;
+      padding: 25px;
+      border: 1px solid rgba(255,255,255,.11);
+      border-radius: 23px;
+      background: rgba(255,255,255,.07);
+    }
+
+    #yc-site .yc-form input {
+      width: 100%;
+      height: 52px;
+      padding: 0 15px;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 13px;
+      outline: none;
+      color: white;
+      background: rgba(255,255,255,.08);
+    }
+
+    #yc-site .yc-form input::placeholder { color: #aeb4c3; }
+    #yc-site .yc-form input:focus { border-color: var(--yc-yellow); }
+    #yc-site .yc-form-note { color: #8f96a7; font-size: 10px; line-height: 1.5; }
+    #yc-site .yc-form-note a { text-decoration: underline; }
+
+    #yc-site .yc-footer {
+      padding: 29px 0;
+      color: #747b8c;
+      background: #101119;
+      font-size: 12px;
+    }
+
+    #yc-site .yc-footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    #yc-site .yc-footer-links { display: flex; flex-wrap: wrap; gap: 18px; }
+
+    @media (max-width: 980px) {
+      #yc-site .yc-nav { display: none; }
+      #yc-site .yc-hero-grid,
+      #yc-site .yc-calc-wrap,
+      #yc-site .yc-cta-box { grid-template-columns: 1fr; }
+      #yc-site .yc-hero-grid { gap: 45px; }
+      #yc-site .yc-map-card { max-width: 650px; width: 100%; margin: 0 auto; }
+      #yc-site .yc-grid-3,
+      #yc-site .yc-result-grid { grid-template-columns: repeat(2, 1fr); }
+      #yc-site .yc-process-grid { grid-template-columns: repeat(2, 1fr); }
+      #yc-site .yc-price-grid { grid-template-columns: 1fr; max-width: 650px; margin: auto; }
+      #yc-site .yc-price-card.yc-popular { transform: none; }
+    }
+
+    @media (max-width: 640px) {
+      #yc-site .yc-container { width: min(100% - 28px, 1180px); }
+      #yc-site .yc-header { padding: 14px 0; }
+      #yc-site .yc-phone { display: none; }
+      #yc-site .yc-header .yc-btn { min-height: 42px; padding: 0 13px; font-size: 12px; }
+      #yc-site .yc-logo { font-size: 15px; }
+      #yc-site .yc-logo-icon { width: 36px; height: 36px; }
+      #yc-site .yc-hero { padding: 55px 0 62px; }
+      #yc-site h1 { font-size: 42px; }
+      #yc-site .yc-lead { font-size: 16px; }
+      #yc-site .yc-hero-actions { display: grid; }
+      #yc-site .yc-hero-actions .yc-btn { width: 100%; }
+      #yc-site .yc-mini-proof { display: grid; gap: 11px; }
+      #yc-site .yc-map-card { min-height: 430px; padding: 16px; border-radius: 24px; }
+      #yc-site .yc-map-bg { border-radius: 24px; }
+      #yc-site .yc-business-card { left: 14px; right: 14px; bottom: 14px; padding: 17px; }
+      #yc-site .yc-floating { font-size: 11px; }
+      #yc-site .yc-float-review { right: 6px; top: 45px; }
+      #yc-site .yc-float-route { left: 6px; top: 130px; }
+      #yc-site .yc-section,
+      #yc-site .yc-cta { padding: 68px 0; }
+      #yc-site .yc-grid-3,
+      #yc-site .yc-result-grid,
+      #yc-site .yc-process-grid { grid-template-columns: 1fr; }
+      #yc-site .yc-service-card { min-height: auto; }
+      #yc-site .yc-result-card p { min-height: auto; }
+      #yc-site .yc-calc-wrap,
+      #yc-site .yc-cta-box { padding: 25px; border-radius: 24px; gap: 28px; }
+      #yc-site .yc-calc { padding: 18px; }
+      #yc-site .yc-footer-row { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+
+  <header class="yc-header">
+    <div class="yc-container yc-header-row">
+      <a class="yc-logo" href="#yc-top" aria-label="На главную">
+        <span class="yc-logo-icon">Astral</span>
+        <span></span>
+      </a>
+
+      <nav class="yc-nav" aria-label="Навигация">
+        <a href="#yc-services">Услуги</a>
+        <a href="#yc-results">Результаты</a>
+        <a href="#yc-process">Как работаем</a>
+        <a href="#yc-prices">Тарифы</a>
+        <a href="#yc-faq">FAQ</a>
+      </nav>
+
+      <div class="yc-header-contact">
+        <a class="yc-phone" href="tel:+79000857862">+7 (900) 085-78-62</a>
+        <a class="yc-btn yc-btn-yellow" href="#yc-contact">Бесплатный аудит</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="yc-top">
+    <section class="yc-hero">
+      <div class="yc-container yc-hero-grid">
+        <div>
+          <div class="yc-eyebrow"><span class="yc-dot"></span> Продвижение бизнеса на Яндекс Картах</div>
+          <h1>Превращаем карточку в <span class="yc-highlight">источник клиентов</span></h1>
+          <p class="yc-lead">Оформляем, развиваем и усиливаем видимость карточек организаций в локальном поиске — системно, прозрачно и без обещаний «первого места за три дня».</p>
+
+          <div class="yc-hero-actions">
+            <a class="yc-btn yc-btn-yellow" href="#yc-contact">Получить аудит карточки →</a>
+            <a class="yc-btn yc-btn-light" href="#yc-results">Посмотреть результаты</a>
+          </div>
+
+          <div class="yc-mini-proof">
+            <span><i class="yc-check">✓</i> Работа по договору</span>
+            <span><i class="yc-check">✓</i> Отчёт каждый месяц</span>
+            <span><i class="yc-check">✓</i> Без накрутки отзывов</span>
+          </div>
+        </div>
+
+        <div class="yc-map-card" aria-label="Демонстрация карточки на карте">
+          <div class="yc-map-bg">
+            <div class="yc-map-road"></div>
+            <div class="yc-map-pin yc-pin-1"><span>Я</span></div>
+            <div class="yc-map-pin yc-pin-2"><span>Я</span></div>
+            <div class="yc-map-pin yc-pin-3"><span>Я</span></div>
+          </div>
+
+          <div class="yc-floating yc-float-review">⭐ Новые отзывы</div>
+          <div class="yc-floating yc-float-route">↗ Больше маршрутов</div>
+
+          <div class="yc-business-card">
+            <div class="yc-business-top">
+              <div>
+                <div class="yc-business-name">Ваша компания</div>
+                <div class="yc-business-category">Услуги · открыто до 21:00 МСК</div>
+              </div>
+              <div class="yc-rating"><span class="yc-star">★</span> 4,9</div>
+            </div>
+            <div class="yc-progress"><span></span></div>
+            <div class="yc-card-caption">
+              <span>Карточка заполнена на 87%</span>
+              <strong>Цель — 100%</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="yc-services" class="yc-section yc-section-white">
+      <div class="yc-container">
+        <div class="yc-section-head">
+          <div class="yc-kicker">Что делаем</div>
+          <h2>Полное развитие карточки организации</h2>
+          <p>Не ограничиваемся заменой фотографий. Работаем с контентом, репутацией, локальной выдачей и конверсией карточки в обращение.</p>
+        </div>
+
+        <div class="yc-grid-3">
+          <article class="yc-service-card">
+            <div class="yc-service-icon">⌕</div>
+            <h3>Аудит карточки</h3>
+            <p>Проверим заполнение, категории, дубли, контент, отзывы, позиции и ошибки, которые мешают получать обращения.</p>
+          </article>
+          <article class="yc-service-card">
+            <div class="yc-service-icon">✦</div>
+            <h3>Упаковка профиля</h3>
+            <p>Оформим описание, услуги, товары, витрину, обложки, фотографии, меню и преимущества компании.</p>
+          </article>
+          <article class="yc-service-card">
+            <div class="yc-service-icon">⌖</div>
+            <h3>Локальное продвижение</h3>
+            <p>Соберём запросы, улучшим релевантность карточки и будем отслеживать видимость в нужных районах.</p>
+          </article>
+          <article class="yc-service-card">
+            <div class="yc-service-icon">★</div>
+            <h3>Работа с репутацией</h3>
+            <p>Настроим легальный сбор обратной связи, подготовим ответы и регламент обработки негатива.</p>
+          </article>
+          <article class="yc-service-card">
+            <div class="yc-service-icon">✎</div>
+            <h3>Контент и публикации</h3>
+            <p>Создадим контент-план, новости, акции и визуалы, чтобы профиль выглядел живым и актуальным.</p>
+          </article>
+          <article class="yc-service-card">
+            <div class="yc-service-icon">↗</div>
+            <h3>Аналитика</h3>
+            <p>Отследим показы, переходы, звонки, маршруты и точки роста. Вы получите понятный отчёт без воды.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="yc-results" class="yc-section yc-results">
+      <div class="yc-container">
+        <div class="yc-section-head">
+          <div class="yc-kicker">Примеры результатов</div>
+          <h2>Показываем динамику в цифрах</h2>
+          <p>Замените демонстрационные данные ниже на свои подтверждённые кейсы и укажите период работы.</p>
+        </div>
+
+        <div class="yc-result-grid">
+          <article class="yc-result-card">
+            <span class="yc-result-tag">СТОМАТОЛОГИЯ</span>
+            <h3>Карточка клиники</h3>
+            <p>Полная переупаковка, новые услуги, контент и работа с обратной связью.</p>
+            <div class="yc-metrics">
+              <div class="yc-metric"><strong>+64%</strong><span>переходов*</span></div>
+              <div class="yc-metric"><strong>+31%</strong><span>звонков*</span></div>
+            </div>
+          </article>
+
+          <article class="yc-result-card">
+            <span class="yc-result-tag">АВТОСЕРВИС</span>
+            <h3>Локальный автосервис</h3>
+            <p>Семантика услуг, новые фото, публикации и улучшение ответов на отзывы.</p>
+            <div class="yc-metrics">
+              <div class="yc-metric"><strong>×2,1</strong><span>маршрутов*</span></div>
+              <div class="yc-metric"><strong>4,8</strong><span>рейтинг*</span></div>
+            </div>
+          </article>
+
+          <article class="yc-result-card">
+            <span class="yc-result-tag">САЛОН КРАСОТЫ</span>
+            <h3>Студия в спальном районе</h3>
+            <p>Витрина услуг, акция для новых клиентов и системная актуализация профиля.</p>
+            <div class="yc-metrics">
+              <div class="yc-metric"><strong>+83%</strong><span>показов*</span></div>
+              <div class="yc-metric"><strong>+42%</strong><span>действий*</span></div>
+            </div>
+          </article>
+        </div>
+        <p class="yc-disclaimer">* Демонстрационные значения. Результат зависит от ниши, города, конкуренции, исходного состояния карточки и срока продвижения. Не публикуйте цифры без подтверждения.</p>
+      </div>
+    </section>
+
+    <section id="yc-process" class="yc-section">
+      <div class="yc-container">
+        <div class="yc-section-head yc-center">
+          <div class="yc-kicker">Процесс</div>
+          <h2>Понятная работа по шагам</h2>
+          <p>Вы всегда знаете, что сделано сейчас и что запланировано дальше.</p>
+        </div>
+
+        <div class="yc-process-grid">
+          <article class="yc-step">
+            <h3>Проводим аудит</h3>
+            <p>Изучаем карточку, конкурентов, запросы и текущие показатели.</p>
+          </article>
+          <article class="yc-step">
+            <h3>Готовим стратегию</h3>
+            <p>Формируем список задач, приоритеты и план работ на первый месяц.</p>
+          </article>
+          <article class="yc-step">
+            <h3>Внедряем</h3>
+            <p>Оформляем профиль, обновляем контент и запускаем системную работу.</p>
+          </article>
+          <article class="yc-step">
+            <h3>Измеряем</h3>
+            <p>Сравниваем показатели, корректируем действия и отправляем отчёт.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="yc-prices" class="yc-section yc-section-white">
+      <div class="yc-container">
+        <div class="yc-section-head yc-center">
+          <div class="yc-kicker">Тарифы</div>
+          <h2>Выберите подходящий формат</h2>
+          <p>Цены ниже можно заменить на ваши. Точный объём работ определяется после аудита.</p>
+        </div>
+
+        <div class="yc-price-grid">
+          <article class="yc-price-card">
+            <div class="yc-price-name">Старт</div>
+            <div class="yc-price-for">Для новой или давно не обновлявшейся карточки</div>
+            <div class="yc-price">5000 ₽ <small>/ разово</small></div>
+            <ul class="yc-list">
+              <li>Аудит карточки и конкурентов</li>
+              <li>Основное оформление профиля</li>
+              <li>Заполнение услуг и описания</li>
+              <li>Рекомендации по отзывам</li>
+              <li>Итоговый чек-лист</li>
+              <li>Ответы на отзывы</li>
+            </ul>
+            <a class="yc-btn yc-btn-light" href="#yc-contact" data-plan="Старт">Выбрать тариф</a>
+          </article>
+
+          <article class="yc-price-card yc-popular">
+            <span class="yc-popular-badge">Популярный</span>
+            <div class="yc-price-name">Развитие</div>
+            <div class="yc-price-for">Системная ежемесячная работа с карточкой</div>
+            <div class="yc-price">10 000 ₽ <small>/ месяц</small></div>
+            <ul class="yc-list">
+              <li>Всё из тарифа «Старт»</li>
+              <li>Работа с локальными запросами</li>
+              <li>Контент и публикации</li>
+              <li>Ответы на отзывы</li>
+              <li>Мониторинг конкурентов</li>
+              <li>Ежемесячный отчёт</li>
+            </ul>
+            <a class="yc-btn yc-btn-yellow" href="#yc-contact" data-plan="Развитие">Выбрать тариф</a>
+          </article>
+
+          <article class="yc-price-card">
+            <div class="yc-price-name">Сеть</div>
+            <div class="yc-price-for">Для компаний с несколькими филиалами</div>
+            <div class="yc-price">от 25 000 ₽ <small>/ месяц</small></div>
+            <ul class="yc-list">
+              <li>Единый стандарт карточек</li>
+              <li>Работа со всеми филиалами</li>
+              <li>Контроль актуальности данных</li>
+              <li>Репутационный мониторинг</li>
+              <li>Сводная аналитика</li>
+              <li>Персональный план работ</li>
+            </ul>
+            <a class="yc-btn yc-btn-light" href="#yc-contact" data-plan="Сеть">Обсудить проект</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="yc-section">
+      <div class="yc-container">
+        <div class="yc-calc-wrap">
+          <div class="yc-calc-copy">
+            <div class="yc-kicker" style="color:#fff0a3">Калькулятор</div>
+            <h2>Оцените бюджет продвижения</h2>
+            <p>Укажите количество филиалов и формат работы. Расчёт предварительный — финальная стоимость зависит от состояния карточек и объёма задач.</p>
+          </div>
+
+          <div class="yc-calc">
+            <div class="yc-field">
+              <label for="yc-branches">Количество филиалов</label>
+              <input id="yc-branches" type="number" min="1" max="100" value="1">
+            </div>
+            <div class="yc-field">
+              <label for="yc-format">Формат работы</label>
+              <select id="yc-format">
+                <option value="5000">Разовая упаковка</option>
+                <option value="10000" selected>Ежемесячное развитие</option>
+                <option value="25000">Развитие сети — за филиал</option>
+              </select>
+            </div>
+            <div class="yc-calc-total">
+              <span>Предварительная стоимость</span>
+              <strong id="yc-total">19 900 ₽</strong>
+            </div>
+            <a class="yc-btn yc-btn-yellow" href="#yc-contact">Получить точный расчёт</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="yc-faq" class="yc-section yc-section-white">
+      <div class="yc-container">
+        <div class="yc-section-head yc-center">
+          <div class="yc-kicker">Вопросы</div>
+          <h2>Коротко о важном</h2>
+        </div>
+
+        <div class="yc-faq">
+          <article class="yc-faq-item yc-open">
+            <button class="yc-faq-btn" type="button"><span>Когда появятся первые изменения?</span><i class="yc-faq-plus">+</i></button>
+            <div class="yc-faq-answer"><p>Исправления и новое оформление появляются после модерации Яндекса. Динамику продвижения корректнее оценивать за несколько месяцев: срок зависит от ниши, конкуренции и исходного состояния карточки.</p></div>
+          </article>
+          <article class="yc-faq-item">
+            <button class="yc-faq-btn" type="button"><span>Вы гарантируете первое место?</span><i class="yc-faq-plus">+</i></button>
+            <div class="yc-faq-answer"><p>Нет. Позиции определяются алгоритмами Яндекса и зависят в том числе от расстояния до пользователя. Мы гарантируем согласованный объём работ, прозрачную аналитику и соблюдение правил площадки.</p></div>
+          </article>
+          <article class="yc-faq-item">
+            <button class="yc-faq-btn" type="button"><span>Вы накручиваете отзывы?</span><i class="yc-faq-plus">+</i></button>
+            <div class="yc-faq-answer"><p>Нет. Фальшивые отзывы нарушают правила площадки и создают риск блокировки. Мы помогаем выстроить законный сбор обратной связи от реальных клиентов и корректно отвечать на отзывы.</p></div>
+          </article>
+          <article class="yc-faq-item">
+            <button class="yc-faq-btn" type="button"><span>Можно продвигать несколько филиалов?</span><i class="yc-faq-plus">+</i></button>
+            <div class="yc-faq-answer"><p>Да. Для сети создаём единые стандарты оформления, следим за актуальностью данных каждого филиала и готовим сводную аналитику.</p></div>
+          </article>
+          <article class="yc-faq-item">
+            <button class="yc-faq-btn" type="button"><span>Доступ к карточке останется у меня?</span><i class="yc-faq-plus">+</i></button>
+            <div class="yc-faq-answer"><p>Да. Владельцем карточки и данных остаётесь вы. Для работы предоставляется необходимый уровень доступа без передачи права собственности.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="yc-contact" class="yc-cta">
+      <div class="yc-container">
+        <div class="yc-cta-box">
+          <div class="yc-cta-copy">
+            <div class="yc-kicker" style="color:#ffdc52">Бесплатный первый шаг</div>
+            <h2>Разберём вашу карточку и найдём точки роста</h2>
+            <p>Оставьте контакты и ссылку на организацию. После отправки откроется WhatsApp с готовым сообщением — останется нажать «Отправить».</p>
+          </div>
+
+          <form id="yc-lead-form" class="yc-form">
+            <input id="yc-name" type="text" placeholder="Ваше имя" autocomplete="name" required>
+            <input id="yc-contact-input" type="text" placeholder="Телефон или Telegram" required>
+            <input id="yc-card-link" type="url" placeholder="Ссылка на карточку в Яндексе">
+            <input id="yc-plan-input" type="hidden" value="Аудит карточки">
+            <button class="yc-btn yc-btn-yellow" type="submit">Получить бесплатный аудит</button>
+            <div class="yc-form-note">Нажимая кнопку, вы соглашаетесь с <a href="#" target="_blank">политикой конфиденциальности</a>. Не забудьте заменить ссылку на свою политику.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="yc-footer">
+    <div class="yc-container yc-footer-row">
+      <div>© 2026 «Astral». Продвижение карточек организаций.</div>
+      <div class="yc-footer-links">
+        <a href="https://t.me/your_username" target="_blank" rel="noopener">Telegram</a>
+        <a href="tel:+79000857862">+7 (900) 085-78-62</a>
+        <a href="#" target="_blank">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const root = document.getElementById('yc-site');
+      if (!root) return;
+
+      // Плавная прокрутка внутри лендинга
+      root.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+          const selector = link.getAttribute('href');
+          if (!selector || selector === '#') return;
+          const target = document.querySelector(selector);
+          if (target) {
+            event.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      // FAQ
+      root.querySelectorAll('.yc-faq-btn').forEach(function (button) {
+        button.addEventListener('click', function () {
+          const item = button.closest('.yc-faq-item');
+          const isOpen = item.classList.contains('yc-open');
+          root.querySelectorAll('.yc-faq-item').forEach(function (faq) {
+            faq.classList.remove('yc-open');
+          });
+          if (!isOpen) item.classList.add('yc-open');
+        });
+      });
+
+      // Калькулятор
+      const branches = root.querySelector('#yc-branches');
+      const format = root.querySelector('#yc-format');
+      const total = root.querySelector('#yc-total');
+
+      function updateTotal() {
+        const qty = Math.max(1, Number(branches.value) || 1);
+        const price = Number(format.value) || 0;
+        const amount = qty * price;
+        total.textContent = new Intl.NumberFormat('ru-RU').format(amount) + ' ₽';
+      }
+
+      branches.addEventListener('input', updateTotal);
+      format.addEventListener('change', updateTotal);
+      updateTotal();
+
+      // Передача выбранного тарифа в форму
+      root.querySelectorAll('[data-plan]').forEach(function (button) {
+        button.addEventListener('click', function () {
+          root.querySelector('#yc-plan-input').value = button.getAttribute('data-plan');
+        });
+      });
+
+      // Форма: открывает WhatsApp с готовым сообщением
+      // ВАЖНО: замените номер ниже. Только цифры, без «+», пробелов и скобок.
+      const WHATSAPP_NUMBER = '79990000000';
+      const form = root.querySelector('#yc-lead-form');
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const name = root.querySelector('#yc-name').value.trim();
+        const contact = root.querySelector('#yc-contact-input').value.trim();
+        const cardLink = root.querySelector('#yc-card-link').value.trim() || 'не указана';
+        const plan = root.querySelector('#yc-plan-input').value;
+
+        const message = [
+          'Здравствуйте! Хочу получить аудит Яндекс Карточки.',
+          '',
+          'Имя: ' + name,
+          'Контакт: ' + contact,
+          'Интересует: ' + plan,
+          'Ссылка на карточку: ' + cardLink
+        ].join('\n');
+
+        const url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message);
+        window.open(url, '_blank', 'noopener');
+      });
+    })();
+  </script>
+</section>
