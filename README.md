@@ -1214,7 +1214,7 @@
 
       // Форма: открывает WhatsApp с готовым сообщением
       // ВАЖНО: замените номер ниже. Только цифры, без «+», пробелов и скобок.
-      const WHATSAPP_NUMBER = '79990000000';
+      const WHATSAPP_NUMBER = '79000857862';
       const form = root.querySelector('#yc-lead-form');
 
       form.addEventListener('submit', function (event) {
